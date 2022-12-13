@@ -2,6 +2,10 @@ package events
 
 import "time"
 
+const CurrentYearEventName = "CurrentYearEvent"
+const SecondaryDbLoadedEventName = "SecondaryDbLoadedEvent"
+const SecondaryDbScoreBulkProcessedEventName = "SecondaryDbScoreBulkProcessedEvent"
+
 type CurrentYearEvent struct {
 	Year int
 }
