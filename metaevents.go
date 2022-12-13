@@ -1,15 +1,15 @@
 package events
 
-type CurrentYearMessage struct {
+type CurrentYearEvent struct {
 	year int
 }
 
-type SecondaryDbLoadedMessage struct {
+type SecondaryDbLoadedEvent struct {
 	currentSecondaryDatabaseDatetime  int
 	previousSecondaryDatabaseDatetime int
 }
 
-type SecondaryDbScoreBulkProcessed struct {
+type SecondaryDbScoreBulkProcessedEvent struct {
 	lessonIdMin                       int
 	lessonIdMAx                       int
 	currentSecondaryDatabaseDatetime  int
