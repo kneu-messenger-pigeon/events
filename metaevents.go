@@ -1,17 +1,19 @@
 package events
 
+import "time"
+
 type CurrentYearEvent struct {
-	year int
+	Year int
 }
 
 type SecondaryDbLoadedEvent struct {
-	currentSecondaryDatabaseDatetime  int
-	previousSecondaryDatabaseDatetime int
+	CurrentSecondaryDatabaseDatetime  time.Time
+	PreviousSecondaryDatabaseDatetime time.Time
 }
 
 type SecondaryDbScoreBulkProcessedEvent struct {
-	lessonIdMin                       int
-	lessonIdMAx                       int
-	currentSecondaryDatabaseDatetime  int
-	previousSecondaryDatabaseDatetime int
+	LessonIdMin                       int
+	LessonIdMAx                       int
+	CurrentSecondaryDatabaseDatetime  time.Time
+	PreviousSecondaryDatabaseDatetime time.Time
 }
