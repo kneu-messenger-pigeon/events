@@ -11,6 +11,7 @@ type CurrentYearEvent struct {
 }
 
 type SecondaryDbLoadedEvent struct {
+	Year                              int
 	CurrentSecondaryDatabaseDatetime  time.Time
 	PreviousSecondaryDatabaseDatetime time.Time
 }
