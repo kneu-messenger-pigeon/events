@@ -24,7 +24,7 @@ type SecondaryDbLessonProcessedEvent struct {
 
 type SecondaryDbScoreBulkProcessedEvent struct {
 	ScoreIdMin                        uint
-	ScoreIdMAx                        uint
+	ScoreIdMax                        uint
 	CurrentSecondaryDatabaseDatetime  time.Time
 	PreviousSecondaryDatabaseDatetime time.Time
 }
