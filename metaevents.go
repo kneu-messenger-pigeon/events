@@ -23,7 +23,7 @@ type SecondaryDbLessonProcessedEvent struct {
 }
 
 type SecondaryDbScoreBulkProcessedEvent struct {
-	ScoreIdMinOrEqual                 uint
+	ScoreIdMin                        uint
 	ScoreIdMAx                        uint
 	CurrentSecondaryDatabaseDatetime  time.Time
 	PreviousSecondaryDatabaseDatetime time.Time
