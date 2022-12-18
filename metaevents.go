@@ -8,11 +8,11 @@ const SecondaryDbLessonProcessedEventName = "SecondaryDbLessonProcessedEvent"
 const SecondaryDbScoreBulkProcessedEventName = "SecondaryDbScoreBulkProcessedEvent"
 
 type CurrentYearEvent struct {
-	Year uint
+	Year int
 }
 
 type SecondaryDbLoadedEvent struct {
-	Year                              uint
+	Year                              int
 	CurrentSecondaryDatabaseDatetime  time.Time
 	PreviousSecondaryDatabaseDatetime time.Time
 }
