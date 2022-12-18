@@ -3,6 +3,6 @@ package events
 const DisciplineEventName = "DisciplineEvent"
 
 type DisciplineEvent struct {
-	Id   int
+	Id   uint
 	Name string
 }
