@@ -5,7 +5,8 @@ import "time"
 const CurrentYearEventName = "CurrentYearEvent"
 const SecondaryDbLoadedEventName = "SecondaryDbLoadedEvent"
 const SecondaryDbLessonProcessedEventName = "SecondaryDbLessonProcessedEvent"
-const SecondaryDbScoreBulkProcessedEventName = "SecondaryDbScoreBulkProcessedEvent"
+const SecondaryDbScoreProcessedEventName = "SecondaryDbScoreProcessedEvent"
+const SecondaryDbDeletedScoreProcessedEventName = "SecondaryDbDeletedScoreProcessedEvent"
 
 type CurrentYearEvent struct {
 	Year int
@@ -22,9 +23,12 @@ type SecondaryDbLessonProcessedEvent struct {
 	PreviousSecondaryDatabaseDatetime time.Time
 }
 
-type SecondaryDbScoreBulkProcessedEvent struct {
-	ScoreIdMin                        uint
-	ScoreIdMax                        uint
+type SecondaryDbScoreProcessedEvent struct {
+	CurrentSecondaryDatabaseDatetime  time.Time
+	PreviousSecondaryDatabaseDatetime time.Time
+}
+
+type SecondaryDbDeletedScoreProcessedEvent struct {
 	CurrentSecondaryDatabaseDatetime  time.Time
 	PreviousSecondaryDatabaseDatetime time.Time
 }
