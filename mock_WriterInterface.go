@@ -14,6 +14,20 @@ type MockWriterInterface struct {
 	mock.Mock
 }
 
+// Close provides a mock function with given fields:
+func (_m *MockWriterInterface) Close() error {
+	ret := _m.Called()
+
+	var r0 error
+	if rf, ok := ret.Get(0).(func() error); ok {
+		r0 = rf()
+	} else {
+		r0 = ret.Error(0)
+	}
+
+	return r0
+}
+
 // WriteMessages provides a mock function with given fields: ctx, msgs
 func (_m *MockWriterInterface) WriteMessages(ctx context.Context, msgs ...kafka.Message) error {
 	_va := make([]interface{}, len(msgs))

@@ -14,6 +14,20 @@ type MockReaderInterface struct {
 	mock.Mock
 }
 
+// Close provides a mock function with given fields:
+func (_m *MockReaderInterface) Close() error {
+	ret := _m.Called()
+
+	var r0 error
+	if rf, ok := ret.Get(0).(func() error); ok {
+		r0 = rf()
+	} else {
+		r0 = ret.Error(0)
+	}
+
+	return r0
+}
+
 // CommitMessages provides a mock function with given fields: _a0, _a1
 func (_m *MockReaderInterface) CommitMessages(_a0 context.Context, _a1 ...kafka.Message) error {
 	_va := make([]interface{}, len(_a1))
