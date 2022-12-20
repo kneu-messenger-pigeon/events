@@ -14,7 +14,7 @@ type ScoreEvent struct {
 	DisciplineId uint
 	Semester     uint8
 
-	Value     *float32
+	Value     float32
 	IsAbsent  bool
 	IsDeleted bool
 	UpdatedAt time.Time
