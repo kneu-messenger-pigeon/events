@@ -9,6 +9,7 @@ type LessonEvent struct {
 	DisciplineId uint
 	TypeId       uint8
 	Date         time.Time
+	Year         int
 	Semester     uint8
 	IsDeleted    bool
 }

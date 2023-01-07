@@ -12,6 +12,7 @@ type ScoreEvent struct {
 	LessonId     uint
 	LessonPart   uint8
 	DisciplineId uint
+	Year         int
 	Semester     uint8
 
 	Value     float32

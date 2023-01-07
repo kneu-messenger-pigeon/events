@@ -19,16 +19,19 @@ type SecondaryDbLoadedEvent struct {
 }
 
 type SecondaryDbLessonProcessedEvent struct {
+	Year                              int
 	CurrentSecondaryDatabaseDatetime  time.Time
 	PreviousSecondaryDatabaseDatetime time.Time
 }
 
 type SecondaryDbScoreProcessedEvent struct {
+	Year                              int
 	CurrentSecondaryDatabaseDatetime  time.Time
 	PreviousSecondaryDatabaseDatetime time.Time
 }
 
 type SecondaryDbDeletedScoreProcessedEvent struct {
+	Year                              int
 	CurrentSecondaryDatabaseDatetime  time.Time
 	PreviousSecondaryDatabaseDatetime time.Time
 }
