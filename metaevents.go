@@ -39,9 +39,11 @@ type SecondaryDbDeletedScoreProcessedEvent struct {
 
 type LessonTypesList struct {
 	Year int
-	List []struct {
-		Id        int
-		ShortName string
-		LongName  string
-	}
+	List []LessonType
+}
+
+type LessonType struct {
+	Id        int
+	ShortName string
+	LongName  string
 }
