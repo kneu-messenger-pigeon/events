@@ -7,6 +7,7 @@ const SecondaryDbLoadedEventName = "SecondaryDbLoadedEvent"
 const SecondaryDbLessonProcessedEventName = "SecondaryDbLessonProcessedEvent"
 const SecondaryDbScoreProcessedEventName = "SecondaryDbScoreProcessedEvent"
 const SecondaryDbDeletedScoreProcessedEventName = "SecondaryDbDeletedScoreProcessedEvent"
+const LessonTypesListName = "LessonTypesList"
 
 type CurrentYearEvent struct {
 	Year int
@@ -34,4 +35,13 @@ type SecondaryDbDeletedScoreProcessedEvent struct {
 	Year                              int
 	CurrentSecondaryDatabaseDatetime  time.Time
 	PreviousSecondaryDatabaseDatetime time.Time
+}
+
+type LessonTypesList struct {
+	Year int
+	List []struct {
+		Id        int
+		ShortName string
+		LongName  string
+	}
 }
