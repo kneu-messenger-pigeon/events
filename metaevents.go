@@ -43,7 +43,7 @@ type LessonTypesList struct {
 }
 
 type LessonType struct {
-	Id        int
-	ShortName string
-	LongName  string
+	Id        int    `json:"id"`
+	ShortName string `json:"shortName"`
+	LongName  string `json:"longName"`
 }
