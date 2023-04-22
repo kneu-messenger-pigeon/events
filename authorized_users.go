@@ -46,7 +46,7 @@ func GenderFromString(GenderInputString string) (gender Gender) {
 }
 
 // MarshalJSON marshals the enum as a quoted json string
-func (gender *Gender) MarshalJSON() ([]byte, error) {
+func (gender Gender) MarshalJSON() ([]byte, error) {
 	return json.Marshal(gender.String())
 }
 
