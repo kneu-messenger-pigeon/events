@@ -35,6 +35,16 @@ func (gender *Gender) String() string {
 	return GenderToStringMap[*gender]
 }
 
+func GenderFromString(GenderInputString string) (gender Gender) {
+	for GenderCandidate, GenderCandidateString := range GenderToStringMap {
+		if GenderInputString == GenderCandidateString {
+			gender = GenderCandidate
+			break
+		}
+	}
+	return
+}
+
 // MarshalJSON marshals the enum as a quoted json string
 func (gender *Gender) MarshalJSON() ([]byte, error) {
 	return json.Marshal(gender.String())
@@ -45,12 +55,7 @@ func (gender *Gender) UnmarshalJSON(b []byte) error {
 	var genderJsonString string
 	err := json.Unmarshal(b, &genderJsonString)
 	if err != nil {
-		for GenderCandidate, GenderCandidateString := range GenderToStringMap {
-			if GenderCandidateString == genderJsonString {
-				*gender = GenderCandidate
-				break
-			}
-		}
+		*gender = GenderFromString(genderJsonString)
 	}
 
 	return err
