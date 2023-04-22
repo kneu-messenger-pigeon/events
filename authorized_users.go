@@ -54,7 +54,7 @@ func (gender Gender) MarshalJSON() ([]byte, error) {
 func (gender *Gender) UnmarshalJSON(b []byte) error {
 	var genderJsonString string
 	err := json.Unmarshal(b, &genderJsonString)
-	if err != nil {
+	if err == nil {
 		*gender = GenderFromString(genderJsonString)
 	}
 
