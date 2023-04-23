@@ -9,7 +9,7 @@ const UserAuthorizedEventName = "UserAuthorizedEvent"
 type UserAuthorizedEvent struct {
 	Client       string
 	ClientUserId string
-	StudentId    int
+	StudentId    uint
 
 	LastName   string `json:"last_name"`
 	FirstName  string `json:"first_name"`
