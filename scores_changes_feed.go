@@ -4,6 +4,5 @@ const ScoreChangedEventName = "ScoreChangedEvent"
 
 type ScoreChangedEvent struct {
 	ScoreEvent
-	Previous   ScoreValue
-	Discipline Discipline
+	Previous ScoreValue
 }
