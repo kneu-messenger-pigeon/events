@@ -15,9 +15,13 @@ type ScoreEvent struct {
 	Year         int
 	Semester     uint8
 
+	ScoreValue
+	UpdatedAt time.Time
+	SyncedAt  time.Time
+}
+
+type ScoreValue struct {
 	Value     float32
 	IsAbsent  bool
 	IsDeleted bool
-	UpdatedAt time.Time
-	SyncedAt  time.Time
 }
