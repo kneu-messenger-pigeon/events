@@ -3,7 +3,7 @@ package events
 const ScoreChangedEventName = "ScoreChangedEvent"
 
 type ScoreChangedEvent struct {
-	Discipline
 	ScoreEvent
-	Previous ScoreValue
+	Previous   ScoreValue
+	Discipline Discipline
 }
