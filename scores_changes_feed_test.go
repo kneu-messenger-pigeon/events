@@ -9,13 +9,15 @@ func TestScoreChangedEvent_GetMessageKey(t *testing.T) {
 	t.Run("success", func(t *testing.T) {
 		event := ScoreChangedEvent{
 			ScoreEvent: ScoreEvent{
-				Id: 123,
+				LessonId:  123,
+				StudentId: 1,
 			},
 		}
 
 		event2 := ScoreChangedEvent{
 			ScoreEvent: ScoreEvent{
-				Id: 456,
+				LessonId:  222,
+				StudentId: 12,
 			},
 		}
 
