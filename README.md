@@ -1,0 +1,1 @@
+[![.github/workflows/test.yaml](https://github.com/kneu-messenger-pigeon/events/actions/workflows/test.yaml/badge.svg)](https://github.com/kneu-messenger-pigeon/events/actions/workflows/test.yaml)
