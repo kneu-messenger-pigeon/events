@@ -19,3 +19,14 @@ func GetTopics() [TopicsCount]string {
 		AuthorizedUsersTopic,
 	}
 }
+
+func GetPartitionsByTopicName(topicName string) int {
+	switch topicName {
+	case RawScoresTopic:
+		return 2
+	case ScoresChangesFeedTopic:
+		return 6
+	default:
+		return 1
+	}
+}
