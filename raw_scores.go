@@ -18,6 +18,8 @@ type ScoreEvent struct {
 	ScoreValue
 	UpdatedAt time.Time
 	SyncedAt  time.Time
+
+	ScoreSource
 }
 
 type ScoreValue struct {
